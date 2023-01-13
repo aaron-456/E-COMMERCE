@@ -16,7 +16,8 @@
   --colorDark_tittle:#262625;
   --coloradd_s:#262626;
   --efectgood:hsla(206, 3%, 3%, 0.2);
-
+  --Scrollbar: hsl(0, 0%, 85%);
+  --ScrollbarThumb: #423F40;
 
   font-family: "Roboto", sans-serif;
 }
@@ -31,8 +32,8 @@ body.darkmode {
   --colorbuttons: #1f1d2a;
   --colorCard: #121218;
   --efectgood: #FFC93C;
-  
-
+  --Scrollbar: #262626;
+  --ScrollbarThumb: #d8d8d8;
 }
 
 
@@ -72,6 +73,9 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+
+  transition: background-color 0.5s, color 0.5s;
+
 }
 
 /* -------------------------------- L O A D   S T Y L E S ------------------------ */
@@ -107,6 +111,34 @@ body {
     transform: translateY(0);
   }
 }
+
+
+
+
+
+ /* ------------------------------------------ S C R O L L B A R ------------------------------------------ */
+
+
+body::-webkit-scrollbar {
+  width: 0.7rem;
+  background-color:var(--Scrollbar);
+}
+
+body::-webkit-scrollbar-thumb {
+  background:var(--ScrollbarThumb);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background:var(--Text1);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+
 
 /* -----------------inicio carrito-------------- */
 
